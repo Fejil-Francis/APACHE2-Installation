@@ -20,16 +20,26 @@ It is used to serve websites, web applications, and files over the internet or l
 ```bash
 sudo apt-get install -y apache2
 ```
-##Enable Apache2 to Start on Boot
+## Enable Apache2 to Start on Boot
 ```bash
 sudo systemctl enable apache2
 ```
-Start Apache2 Service
+## Start Apache2 Service
 ```bash
 sudo systemctl start apache2
 ```
- Check Apache2 Status
+## Check Apache2 Status
  ```bash
 sudo systemctl status apache2
 ```
+## Copy your website files to the Apache default directory:
+ ```bash
+cd /var/www/html
+```
+## Find Your IP Address
+ ```bash
+ifconfig eth0
+```
+
+## For hosting the website, open a web browser and enter your IP address. If your files are in /var/www/html/, they will be served automatically, and your web server will be hosted.
 
