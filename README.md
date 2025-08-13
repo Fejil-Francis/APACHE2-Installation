@@ -16,7 +16,7 @@ It is used to serve websites, web applications, and files over the internet or l
 
 ## 🛠 Installation & Setup Commands
 
-### 1️⃣ Install Apache2
+## Install Apache2
 ```bash
 sudo apt-get install -y apache2
 ```
