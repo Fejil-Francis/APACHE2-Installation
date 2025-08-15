@@ -36,11 +36,10 @@ sudo systemctl status apache2
  ```bash
 cd /var/www/html
 ```
-## Find Your IP Address
- ```bash
+## Find Your IP Address,look for the inet value (e.g., 192.168.1.10).
+```bash
 ifconfig eth0
 ```
-
 ## For hosting the website, open a web browser and enter your IP address. If your files are in /var/www/html/, they will be served automatically, and your web server will be hosted.
 ## When the IP address is entered in the browser, a page similar to the one shown below will appear.
 
