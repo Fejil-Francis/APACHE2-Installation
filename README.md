@@ -44,3 +44,6 @@ ifconfig eth0
 ## When the IP address is entered in the browser, a page similar to the one shown below will appear.
 
 <img width="567" height="232" alt="indexof" src="https://github.com/user-attachments/assets/9f922003-ba3a-46da-922c-799d8903e0e4" />
+
+## When the i.txt file is opened,
+<img width="528" height="300" alt="helloindex" src="https://github.com/user-attachments/assets/1b13ebb8-9ee6-4a78-bcc3-08f79d348ba8" />
