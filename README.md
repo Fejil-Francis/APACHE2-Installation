@@ -42,4 +42,6 @@ ifconfig eth0
 ```
 
 ## For hosting the website, open a web browser and enter your IP address. If your files are in /var/www/html/, they will be served automatically, and your web server will be hosted.
+## When the IP address is entered in the browser, a page similar to the one shown below will appear.
 
+<img width="567" height="232" alt="indexof" src="https://github.com/user-attachments/assets/9f922003-ba3a-46da-922c-799d8903e0e4" />
