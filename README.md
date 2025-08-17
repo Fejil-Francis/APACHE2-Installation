@@ -31,7 +31,8 @@ sudo systemctl start apache2
 ## Check Apache2 Status
  ```bash
 sudo systemctl status apache2
-```<img width="751" height="316" alt="status" src="https://github.com/user-attachments/assets/b65f239a-e45b-4349-ad09-f2f3c1e5b068" />
+```
+<img width="751" height="316" alt="status" src="https://github.com/user-attachments/assets/b65f239a-e45b-4349-ad09-f2f3c1e5b068" />
 
 ## Copy your website files to the Apache default directory:
  ```bash
