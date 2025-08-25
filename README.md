@@ -38,7 +38,7 @@ sudo systemctl status apache2
  ```bash
 cd /var/www/html
 ```
-## Find Your IP Address,look for the inet value (e.g., 192.168.1.10).
+## Find Your IP Address,look for the inet value (eg: 192.168.1.10).
 ```bash
 ifconfig eth0
 ```
