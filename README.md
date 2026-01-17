@@ -32,6 +32,10 @@ sudo systemctl start apache2
  ```bash
 sudo systemctl status apache2
 ```
+## For stopping Apache2 
+ ```bash
+sudo systemctl stop apache2
+```
 <img width="751" height="316" alt="status" src="https://github.com/user-attachments/assets/b65f239a-e45b-4349-ad09-f2f3c1e5b068" />
 
 ## Copy your website files to the Apache default directory:
@@ -49,3 +53,5 @@ ifconfig eth0
 
 ## Once the i.txt file is opened,
 <img width="528" height="300" alt="helloindex" src="https://github.com/user-attachments/assets/1b13ebb8-9ee6-4a78-bcc3-08f79d348ba8" />
+
+By default, Apache displays the index.html file when accessing a directory. To view all files in the directory, delete the index.html file. After removing index.html, the remaining files in the directory will be displayed.
