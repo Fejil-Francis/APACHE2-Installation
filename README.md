@@ -55,3 +55,112 @@ ifconfig eth0
 <img width="528" height="300" alt="helloindex" src="https://github.com/user-attachments/assets/1b13ebb8-9ee6-4a78-bcc3-08f79d348ba8" />
 
 By default, Apache displays the index.html file when accessing a directory. To view all files in the directory, delete the index.html file. After removing index.html, the remaining files in the directory will be displayed.
+
+
+--------------------------------------------------
+
+## Hosting files from home directory by using apache2
+
+By default, Apache serves files from /var/www/html.  
+In this setup, Apache is reconfigured to serve files from:
+
+/home/username/data
+
+This is useful for lab environments, testing, and development systems.
+
+--------------------------------------------------
+
+Assumptions
+
+• Username: username  
+• Folder to host: /home/username/data  
+• Apache2 is already installed and running  
+
+Replace `username` with your actual system username.
+
+--------------------------------------------------
+
+Step 1: Set Permissions for Home and Data Folder
+
+Apache must be able to access the home directory and read files inside the
+data folder.
+
+Commands:
+
+$ chmod 711 /home/username  
+$ chmod -R 755 /home/username/data  
+
+--------------------------------------------------
+
+Step 2: Change Apache Default Document Root
+
+Open the default Apache virtual host configuration file:
+
+$ sudo nano /etc/apache2/sites-available/000-default.conf
+
+Locate:
+
+DocumentRoot /var/www/html
+
+Replace it with:
+
+DocumentRoot /home/username/data
+
+Save and exit the file.
+
+--------------------------------------------------
+
+Step 3: Allow Apache Access to the New Directory
+
+Edit Apache’s main configuration file:
+
+$ sudo nano /etc/apache2/apache2.conf
+
+Add the following block at the end of the file:
+
+<Directory /home/username/data>
+    AllowOverride All
+    Require all granted
+</Directory>
+
+Save and exit.
+
+--------------------------------------------------
+
+Step 4: Start Apache2
+
+Apply the configuration changes:
+
+$ sudo systemctl restart apache2
+
+--------------------------------------------------
+
+Step 6: Verify in Browser
+
+Open a web browser and visit:
+
+http://localhost
+
+If configured correctly, the test page will be displayed.
+
+--------------------------------------------------
+
+Common Issues
+
+• 403 Forbidden error  
+  → Check permissions on /home/username and /home/username/data  
+
+• Page not loading  
+  → Ensure Apache was restarted after configuration changes  
+
+--------------------------------------------------
+
+Use Cases
+
+• Development and testing labs  
+• Hosting files from user-controlled directories  
+• Learning Apache configuration and permissions  
+
+--------------------------------------------------
+
+
