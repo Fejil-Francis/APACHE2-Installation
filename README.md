@@ -87,17 +87,22 @@ data folder.
 
 Commands:
 
-$ chmod 711 /home/username  
-$ chmod -R 755 /home/username/data  
+ ```bash
+chmod 711 /home/username
+ ```
 
+ ```bash
+chmod -R 755 /home/username/data  
+ ```
 --------------------------------------------------
 
 Step 2: Change Apache Default Document Root
 
 Open the default Apache virtual host configuration file:
 
-$ sudo nano /etc/apache2/sites-available/000-default.conf
-
+ ```bash
+sudo nano /etc/apache2/sites-available/000-default.conf
+ ```
 Locate:
 
 DocumentRoot /var/www/html
@@ -114,7 +119,9 @@ Step 3: Allow Apache Access to the New Directory
 
 Edit Apache’s main configuration file:
 
-$ sudo nano /etc/apache2/apache2.conf
+ ```bash
+sudo nano /etc/apache2/apache2.conf
+ ```
 
 Add the following block at the end of the file:
 
@@ -131,7 +138,9 @@ Step 4: Start Apache2
 
 Apply the configuration changes:
 
-$ sudo systemctl restart apache2
+ ```bash
+sudo systemctl restart apache2
+ ```
 
 --------------------------------------------------
 
